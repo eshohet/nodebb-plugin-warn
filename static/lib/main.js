@@ -1,18 +1,16 @@
 "use strict";
 
-$(document).ready(function() {
-	/*
-		This file shows how client-side javascript can be included via a plugin.
-		If you check `plugin.json`, you'll see that this file is listed under "scripts".
-		That array tells NodeBB which files to bundle into the minified javascript
-		that is served to the end user.
+/*globals $, socket, app*/
 
-		Some events you can elect to listen for:
-
-		$(document).ready();			Fired when the DOM is ready
-		$(window).on('action:ajaxify.end', function(data) { ... });			"data" contains "url"
-	*/
-
-	console.log('nodebb-plugin-quickstart: loaded');
-	// Note how this is shown in the console on the first load of every page
+$(window).on('action:ajaxify.end', function (ev, data) {
+    if (data.url && data.url.match('^topic/')) {
+        $('[component="topic"]').on('click', '[component="post/warn-user"]', function (e) {
+            const pid = $(this).attr("data-pid");
+            const uid = $(this).attr("data-uid");
+            const event = `plugins.warn.addWarn`;
+            socket.emit(event, { pid: pid, uid: uid }, (error) => {
+                app.alertError(error.message);
+            });
+        });
+    }
 });
