@@ -1,26 +1,21 @@
 {
-  "name": "nodebb-plugin-quickstart",
+  "name": "nodebb-plugin-warn",
   "version": "0.2.3",
-  "description": "A starter kit for quickly creating NodeBB plugins",
+  "description": "Ability to warn users",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart"
+    "url": "https://github.com/eshohet/nodebb-plugin-warn"
   },
   "keywords": [
     "nodebb",
-    "plugin",
-    "quickstart",
-    "shell"
+    "plugin"
   ],
   "author": {
-    "name": "psychobunny",
-    "email": "psycho.bunny@hotmail.com"
+    "name": "eshohet",
+    "email": "elliot.shohet@gmail.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart/issues"
-  },
   "readmeFilename": "README.md",
   "nbbpm": {
     "compatibility": "^1.0.0"

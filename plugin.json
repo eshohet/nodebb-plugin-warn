@@ -1,6 +1,6 @@
 {
-	"id": "nodebb-plugin-quickstart",
-	"url": "https://github.com/NodeBB/nodebb-plugin-quickstart",
+	"id": "nodebb-plugin-warn",
+	"url": "https://github.com/eshohet/nodebb-plugin-warn",
 	"library": "./library.js",
 	"hooks": [
 		{
