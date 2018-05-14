@@ -7,9 +7,6 @@
 			"hook": "static:app.load", "method": "init"
 		},
 		{
-			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
-		},
-		{
 			"hook": "action:topic.tools.load", "method": "addModeratorButton"
 		}
 	],
@@ -21,9 +18,6 @@
 	],
 	"scripts": [
 		"static/lib/main.js"
-	],
-	"acpScripts": [
-		"static/lib/admin.js"
 	],
 	"templates": "static/templates"
 }
